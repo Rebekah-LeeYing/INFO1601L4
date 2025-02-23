@@ -6,12 +6,80 @@
 	<title>Document</title>
 </head>
 <style>
+	@media screen and (max-width: 600px) {
+  		div.row{
+        	flex-direction: column;
+   		}
+	}
+
+	h1::first-letter{
+		color: blue;
+	}
+
+	* {
+        box-sizing: border-box;            
+    }
+
+	header, footer, section, aside, main{padding: 1em;}
+
+    header, footer{
+		color: white;
+        background-color:  #19647E;
+		flex-grow: 1;
+    }
+
+    aside{
+        color: #212121;
+        background-color: #FFC857;
+		flex-grow: 3;
+		display: flex;
+		justify-content: center;
+    }
+
+    section{
+        background-color: #F06C9B;
+        color: white;
+		flex-grow: 1;
+		margin: 0.5em;
+    }
+
+    main{
+        background-color: #3E885B;
+        color: white;
+		flex-grow: 7;
+    }
+
+	body{
+    	display: flex;
+		flex-direction: column;
+        background-color: #FFFFFF;
+		height: 100vh;
+		width: 100vw;
+		margin: 0;
+    }
+
+	.row{
+        display: flex;
+        flex-direction: row;
+		flex-grow: 8;
+    }
+
+    .col{
+        display: flex;
+        flex-direction: column;
+    }
 
 </style>
+
 <body>
-
-
-
-	
+	<header>Header</header>
+	<div class="row">
+		<aside class="col">
+			<section>Section 1</section>
+			<section>Section 2</section>
+		</aside>
+		<main>Main</main>
+	</div>
+    <footer>Footer</footer>
 </body>
 </html>
